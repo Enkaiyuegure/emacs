@@ -4,7 +4,7 @@ with final.pkgs.lib; let
 
   # Function to build Emacs configuration
   mkEmacs = { 
-    config ? ./emacs/emacs.el,
+    config ? ./emacs/init.el,
     package ? pkgs.emacs,
     extraPackages ? epkgs: [],
     alwaysEnsure ? true,
@@ -18,7 +18,7 @@ with final.pkgs.lib; let
   commonExtraPackages = epkgs: with epkgs; [
     # Add common packages here, for example:
     # org-roam requires sqlite
-    pkgs.sqlite
+    # pkgs.sqlite
   ];
 
 in {
